@@ -1,0 +1,330 @@
+
+	"1" : {
+		"card_1" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 1 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-outline-info",
+					"content" : "Explore Data"
+				}
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 2 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Split Data"
+				}
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 3 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark dropdown-toggle",
+					"content" : "Choose Algorithm"
+				}
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 4 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Evaluate Modal {{session['model']}}"
+				}
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 5 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Predict Using {{session['model']}}"
+				}
+			}
+		}
+	},
+	"2" : {
+		"card_1" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 1 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-outline-info",
+					"content" : "Explore Data"
+				}
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 2 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/split-data",
+					"class" : "btn btn-outline-info",
+					"content" : "Split Data"
+				}
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 3 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark dropdown-toggle",
+					"content" : "Choose Algorithm"
+				}
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 4 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Evaluate Modal {{session['model']}}"
+				}
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 5 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Predict Using {{session['model']}}"
+				}
+			}
+		}
+	},
+	"3" : {
+		"card_1" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 1 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-outline-info",
+					"content" : "Explore Data"
+				}
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 2 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/split-data",
+					"class" : "btn btn-outline-info",
+					"content" : "Split Data"
+				}
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 3 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "dropdown",
+					"data-target" : "dropdownMenu1",
+					"href" : "#",
+					"class" : "btn btn-warning dropdown-toggle",
+					"content" : "Choose Algorithm"
+				}
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 4 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Evaluate Modal {{session['model']}}"
+				}
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 5 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Predict Using {{session['model']}}"
+				}
+			}
+		}
+	},
+	"4" : {
+		"card_1" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 1 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-outline-info",
+					"content" : "Explore Data"
+				}
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 2 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/split-data",
+					"class" : "btn btn-outline-info",
+					"content" : "Split Data"
+				}
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 3 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "dropdown",
+					"data-target" : "dropdownMenu1",
+					"href" : "#",
+					"class" : "btn btn-warning dropdown-toggle",
+					"content" : "Choose Algorithm"
+				}
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 4 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/evaluate-model",
+					"class" : "btn btn-outline-info",
+					"content" : "Evaluate Model {{session['model']}}"
+				}
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"div_outer" : "col-lg-6 col-sm-12 col-sm-2",
+				"div_card" : "card text-center",
+				"div_card_title" : "card-title",
+				"h1" : "Step 5 :",
+				"div_card_body" : "card-body",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Predict Using {{session['model']}}"
+				}
+			}
+		}
+	}
+}

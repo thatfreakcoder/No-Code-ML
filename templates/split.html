@@ -1,0 +1,120 @@
+{% extends 'block.html' %}
+
+{% block subcontent %}
+<head>
+	<title>Split Data | No-Code ML</title>
+</head>
+
+	{% if split == False %}
+		<form action="/split-data" method="post">
+			<input type='radio' name='test_size' value='0.2' checked> Train : Test = 80% : 20%
+			<br>
+			<input type='radio' name='test_size' value='0.25'> Train : Test = 75% : 25%
+			<br>
+			<input type='radio' name='test_size' value='0.3'> Train : Test = 70% : 30%
+			<br>
+			<br>
+			Random State: <input type="number" name="random_state" max=50 min=0 value=0>
+			<br>
+			<br>
+			<label for="shuffle">Choose Shuffle: </label>
+			<input type='radio' name='shuffle' value='True' checked="checked"> True
+			<input type='radio' name='shuffle' value='False'> False
+			<br>
+			<br>
+			<input type="submit" value="OK" class="btn btn-success m-auto">
+		</form>
+
+
+
+	{% elif split == True %}
+</center>
+		<div style="width: 70%; left:10!important; position: absolute;">
+			<h2> Features Train</h2>
+			<table class="table table-responsive table-inverse">
+				<thead>
+					<tr>
+						{% for col in features_train.columns %}
+							<th>{{ col }}</th>
+						{% endfor %}
+					</tr>
+				</thead>
+				<tbody>
+				{% for data in features_train.values[:5] %}
+					<tr>
+					{% for ind in range(16) %}
+						<td> {{ data[ind] }}
+						</td>
+					{% endfor %}
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	<br><BR>
+	<div style="width: 20%; left:80%!important; position: relative;">
+		<h2> Labels Train</h2>
+		<table class="table table-responsive table-inverse">
+			<thead>
+				<tr>
+					<th>Class</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for data in labels_train.values[:5] %}
+				<tr>
+					<td> {{ data }}
+					</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	<br><BR>
+	<div style="width: 70%; left:10!important; position: absolute;">
+			<h2> Features Test</h2>
+			<table class="table table-responsive table-inverse">
+				<thead>
+					<tr>
+						{% for col in features_test.columns %}
+							<th>{{ col }}</th>
+						{% endfor %}
+					</tr>
+				</thead>
+				<tbody>
+				{% for data in features_test.values[:5] %}
+					<tr>
+					{% for ind in range(16) %}
+						<td> {{ data[ind] }}
+						</td>
+					{% endfor %}
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	<br><BR>
+	<div style="width: 20%; left:80%!important; position: relative;">
+		<h2> Labels Test</h2>
+		<table class="table table-responsive table-inverse">
+			<thead>
+				<tr>
+					<th>Class</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for data in labels_test.values[:5] %}
+				<tr>
+					<td> {{ data }}
+					</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	<br><BR>
+
+	<a href="/reset-split">Reset Train Test Split</a>
+	{% endif %}
+
+{% endblock %}

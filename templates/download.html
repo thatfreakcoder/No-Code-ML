@@ -1,0 +1,7 @@
+{% extends 'block.html' %}
+
+{% block subcontent %}
+<h1>Download .pkl File for <b class="text-warning">{{algo[name]['name']}}</b></h1>
+<a href="{{url_for('static', filename='models/'+session['model']+'.pkl')}}" class="btn btn-warning" download>DOWNLOAD MODEL</a><br>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'block.html' %}
+
+{% block subcontent %}
+<head>
+	<title>Predict | No-Code ML</title>
+</head>
+
+<h1>OUTPUT : </h1>
+		{%if prediction[0] == 1 %}
+			<h1>Yes, with {{ confidence[:5] }}% confidence</h1>
+		{% elif prediction[0] == 0 %}
+			<h1>No, with {{ confidence[:5] }}% confidence</h1>
+		{% endif %}
+		<form action="/predict" method="post">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12 m-auto">
+				<div class="card">
+					<div class="card-body">
+						<h4 style="color:#00ff66!important">Enter Your Age</h4>
+						<br>
+						<input type="number" name="Age" max=99 min=1 placeholder="Enter Age" style="width: 100%!important" required>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 m-auto">
+				<div class="card">
+					<div class="card-title">
+						<h4 style="color:#00ff66!important">Gender</h4>
+					</div>
+					<div class="card-body">
+						<input type="radio" name="Gender" value="0" required>Female
+						<input type="radio" name="Gender" value="1">Male
+						<br>
+					</div>
+				</div>
+			</div>
+			{% for col in columns[2:] %}
+			<div class="col-lg-6 m-auto">
+				<div class="card">
+					<div class="card-title text-capitalize">
+						<h4 style="color:#00ff66!important">{{col}}</h4>
+						<hr color="grey">
+						<h6 class="text-dark">{{api[col]}}</h6>
+					</div>
+					<div class="card-body">
+						<input type="radio" name="{{col}}" value="0" required>NO
+						<input type="radio" name="{{col}}" value="1" required>YES
+						<br>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<input type="submit">
+	</form>
+
+{% endblock %}

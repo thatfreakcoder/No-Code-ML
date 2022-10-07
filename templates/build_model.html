@@ -1,0 +1,13 @@
+{% extends 'block.html' %}
+
+{% block subcontent %}
+	<h2>Model <b class="text-warning">{{algo['name']}}</b> Built Sucessfully</h2>
+	<h4>Selected Algorithm parameters :</h4>
+	{% for para in algo['parameters'] %}
+	<p class="text-capitalize"> {{para}} : {{algo['parameters'][para]}}</p>
+	{% endfor %}
+
+
+	<br><br>
+	{{createdModel}}
+{% endblock %}

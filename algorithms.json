@@ -1,0 +1,75 @@
+{
+	"knn" : {"name" : "K-Nearest Neighbors",
+			 "instance" : KNeighborsClassifier(),
+		   	 "parameters" : {"n_neighbors" : {"value" : [1, 2, 3, 4, 5],
+		   	 								  "type" : int},
+		 				   "algorithm" : {"value" :["auto", "ball_tree", "brute", "kd_tree"],
+		 				   				  "type":str},
+						   "p" : {"value":[1, 2],"type":int}
+		 				}
+			},
+				"logreg" : {"name" : "Logistic Regression",
+						 "instance" : LogisticRegression(),
+					   	 "parameters" :{"C" : {"value" :[0.01, 0.1, 1, 10, 100],
+					 				   				  "type":float},
+					 				   "max_iter" : {"value" : [10, 20, 50, 100, 200],
+					   	 								  "type" : int},
+					 				   "random_state" : {"value" :[rand for rand in range(10)],
+					 				   				  "type":int}
+					 				   }
+				},
+			 	"tree" : {"name" : "Decision Tree Classifier",
+			 			 "instance" : DecisionTreeClassifier(),
+					   	  "parameters" : {"max_depth" : {"value" :[2, 3, 4, 5, 10],
+					 				   				  "type":int},
+					 					  "max_leaf_nodes": {"value" :[2, 3, 4, 5, 10],
+					 				   				  "type":int}
+					 					  }
+					   },
+			 	"forest" : {"name" : "Random Forest",
+			 			 "instance" : RandomForestClassifier(),
+					   	 "parameters" : {"n_estimators" : {"value" :[10, 20, 30, 50, 100, 200],
+					 				   				  "type":int},
+					   	 				 "max_depth" : {"value" :[2, 3, 4, 5, 10],
+					 				   				  "type":int},
+					 					 "max_leaf_nodes": {"value" :[2, 3, 4, 5, 10],
+					 				   				  "type":int}
+					 					  }
+					   },
+				"svm" : {"name" : "Support Vector Machine",
+						 "instance" : SVC(),
+					   	 "parameters" : {"C" : {"value" :[0.01, 0.1, 1, 10, 100],
+					 				   				"type":float},
+							   	 				"degree" : {"value": [1, 3, 5 ,10],
+							   	 				 	"type":int},
+					   	 				 		"kernel" : {"value": ["linear", "poly", "rbf", "sigmoid", "precomputed"],
+					   	 				 			"type":str}
+					   	 				 }
+					   	 },
+				"boost" : {"name" : "Gradient Boosting",
+						 "instance" : GradientBoostingClassifier(),
+					   	 "parameters" : {"loss" :{"value":["deviance","exponential"],
+					   	 							"type":str},
+					   	 				"learning_rate" : {"value":[0.001, 0.01, 0.1, 1, 5],
+					   	 							"type":float},
+					   	 				"n_estimators" : {"value":[10, 20, 50, 100 ,200],
+					   	 							"type":int},
+					   	 				"criterion" : {"value":["friedman_mse" ,"mse", "mae"],
+					   	 							"type":str}
+					   	 				}
+					   	 },
+				"nn" : {"name" : "Neural Network",
+						 "instance" : MLPClassifier(),
+					   	 "parameters" : {"activation" :{"value":["identity", "logistic", "tanh", "relu"],
+					   	 							"type":str},
+					   	 				"optimizer" : {"value":["sgd", "adam"],
+					   	 							"type":str},
+					   	 				"learning_rate_init" : {"value":[0.0001, 0.001, 0.01, 0.10, 1.00, 10.00],
+					   	 							"type":float}
+					   	 				}
+					   	 },
+				"nb" : {"name" : "Naive Bayes",
+						 "instance" : GaussianNB(),
+					   	 "parameters" : {"var_smoothing" : {"value" : [1e-9],"type":float}}
+					   	 }
+			}

@@ -1,0 +1,78 @@
+{% extends 'block.html' %}
+{% block subcontent %}
+<head>
+	<title>Visualise Data | No-Code ML</title>
+</head>
+<p>
+	<h1 class="text-capitalize">Early stage diabetes prediction dataset.</h1>
+	<p>This has been collected using direct questionnaires from the patients of Sylhet Diabetes
+Hospital in Sylhet, Bangladesh and approved by a doctor.</p>
+
+<table class="table table-responsive table-inverse">
+	<thead>
+		<tr>
+			{% for col in Dataset.columns %}
+			<th class="text-capitalize">{{ col }}</th>
+			{% endfor %}
+		</tr>
+	</thead>
+	<tbody>
+		{% for data in Dataset.values[:5] %}
+		<tr>
+			{% for ind in range(17) %}
+			<td> {{ data[ind] }}
+			</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% if encoded == False %}
+<a href="/visualize/encode" class="btn btn-warning">Encode Data</a>
+<br><br>
+
+{% endif %}
+<h3>Visualize Features</h3>
+<div class="row">
+{% for feature in features %}
+	<!-- Button trigger modal -->
+	<div class="col-lg-3 col-sm-6">
+	<button type="button" class="btn btn-danger mt-2 col-lg-12 col-sm-12" data-toggle="modal" data-target="#{{feature.replace(' ', '')}}">
+		{{feature}}
+
+	</button>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="{{feature.replace(' ', '')}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">{{feature}}</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<img src="{{ url_for('static', filename='images/'+feature+'.png') }}" alt="{{ url_for('static', filename='images/'+feature+'.png') }}" height="300px" width="400px">
+				</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+</div>
+	<div class="col-lg-9 col-sm-12 m-auto">
+		<h4 class="alert-heading m-3">Correlation Matrix</h4>
+		<img src="{{url_for('static', filename='images/correlation.png')}}" alt="correlation_map" height="400px" width="100%">
+	</div>
+<p>
+	<h1>Source :</h1>
+	<ol type="1">
+		<li>M. M. Faniqul Islam</li>
+		<li>Rahatara Ferdousi</li>
+		<li>.Sadikur Rahman and Humayra</li>
+		<li>Yasmin Bushara</li>
+	</ol>
+</p>
+<a class="btn btn-warning" target="_blank" href="https://archive.ics.uci.edu/ml/datasets/Early+stage+diabetes+risk+prediction+dataset.">Download Dataset Externally</a>
+</p>
+{% endblock %}

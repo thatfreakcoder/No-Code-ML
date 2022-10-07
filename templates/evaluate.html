@@ -1,0 +1,15 @@
+{% extends 'block.html' %}
+
+{% block subcontent %}
+<head>
+	<title>Evaluate Model | No-Code ML</title>
+</head>
+
+<h1>Train Score : {{(train|string)[:5]}} % 
+<br>
+Test Score : {{(test|string)[:5]}} %</h1>
+<br>
+<h1>Confusion Matrix for {{algorithm[session['model']]['name']}}</h1>
+<img src="{{url_for('static', filename='confusion_matrix/'+session['model']+'.png')}}"><br>
+Not Satisfied with the Accuracy? <a href="/reset-parameters" class="btn btn-warning">Tune Hyperparameter</a>
+{% endblock %}

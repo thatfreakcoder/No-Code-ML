@@ -1,0 +1,488 @@
+{
+	"1" : {
+		"card_1" : {
+			"content" : {
+				"h1" : "Step 1 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-outline-info",
+					"content" : "Explore Data"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"h1" : "Step 2 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Split Data"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"h1" : "Step 3 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark dropdown-toggle",
+					"content" : "Choose Algorithm"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"h1" : "Step 4 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Evaluate Model"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"h1" : "Step 5 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Predict Model"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_6" : {
+			"content" : {
+				"h1" : "Step 6 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Download Model"
+				},
+				"i_class" : ""
+			}
+		}
+	},
+	"2" : {
+		"card_1" : {
+			"content" : {
+				"h1" : "Step 1 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-success",
+					"content" : "Explore Data"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"h1" : "Step 2 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/split-data",
+					"class" : "btn btn-outline-info",
+					"content" : "Split Data"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"h1" : "Step 3 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark dropdown-toggle",
+					"content" : "Choose Algorithm"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"h1" : "Step 4 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Evaluate Model"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"h1" : "Step 5 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Predict Model"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_6" : {
+			"content" : {
+				"h1" : "Step 6 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Download Model"
+				},
+				"i_class" : ""
+			}
+		}
+	},
+	"3" : {
+		"card_1" : {
+			"content" : {
+				"h1" : "Step 1 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-success",
+					"content" : "Explore Data"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"h1" : "Step 2 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/split-data",
+					"class" : "btn btn-success",
+					"content" : "Split Data"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"h1" : "Step 3 :",
+				"a" : {
+					"data-toggle" : "dropdown",
+					"data-target" : "",
+					"href" : "#",
+					"class" : "btn btn-warning dropdown-toggle",
+					"content" : "Choose Algorithm"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"h1" : "Step 4 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Evaluate Model"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"h1" : "Step 5 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Predict Model"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_6" : {
+			"content" : {
+				"h1" : "Step 6 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Download Model"
+				},
+				"i_class" : ""
+			}
+		}
+	},
+	"4" : {
+		"card_1" : {
+			"content" : {
+				"h1" : "Step 1 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-success",
+					"content" : "Explore Data"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"h1" : "Step 2 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/split-data",
+					"class" : "btn btn-success",
+					"content" : "Split Data"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"h1" : "Step 3 :",
+				"a" : {
+					"data-toggle" : "dropdown",
+					"data-target" : "dropdownMenu1",
+					"href" : "#",
+					"class" : "btn btn-success dropdown-toggle",
+					"content" : "Choose Algorithm"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"h1" : "Step 4 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/evaluate-model",
+					"class" : "btn btn-outline-info",
+					"content" : "Evaluate Model"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"h1" : "Step 5 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Predict Model"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_6" : {
+			"content" : {
+				"h1" : "Step 6 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Download Model"
+				},
+				"i_class" : ""
+			}
+		}
+	},
+	"5" : {
+		"card_1" : {
+			"content" : {
+				"h1" : "Step 1 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-success",
+					"content" : "Explore Data"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"h1" : "Step 2 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/split-data",
+					"class" : "btn btn-success",
+					"content" : "Split Data"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"h1" : "Step 3 :",
+				"a" : {
+					"data-toggle" : "dropdown",
+					"data-target" : "dropdownMenu1",
+					"href" : "#",
+					"class" : "btn btn-success dropdown-toggle",
+					"content" : "Choose Algorithm"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"h1" : "Step 4 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/evaluate-model",
+					"class" : "btn btn-success",
+					"content" : "Evaluate Model"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"h1" : "Step 5 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/predict",
+					"class" : "btn btn-outline-info",
+					"content" : "Predict Model"
+				},
+				"i_class" : ""
+			}
+		},
+		"card_6" : {
+			"content" : {
+				"h1" : "Step 6 :",
+				"a" : {
+					"data-toggle" : "modal",
+					"data-target" : "#incomplete",
+					"href" : "#",
+					"class" : "btn btn-outline-dark",
+					"content" : "Download Model"
+				},
+				"i_class" : ""
+			}
+		}
+	},
+	"6" : {
+		"card_1" : {
+			"content" : {
+				"h1" : "Step 1 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/visualize",
+					"class" : "btn btn-success",
+					"content" : "Explore Data"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_2" : {
+			"content" : {
+				"h1" : "Step 2 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/split-data",
+					"class" : "btn btn-success",
+					"content" : "Split Data"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_3" : {
+			"content" : {
+				"h1" : "Step 3 :",
+				"a" : {
+					"data-toggle" : "dropdown",
+					"data-target" : "dropdownMenu1",
+					"href" : "#",
+					"class" : "btn btn-success dropdown-toggle",
+					"content" : "Choose Algorithm"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_4" : {
+			"content" : {
+				"h1" : "Step 4 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/evaluate-model",
+					"class" : "btn btn-success",
+					"content" : "Evaluate Model"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_5" : {
+			"content" : {
+				"h1" : "Step 5 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/predict",
+					"class" : "btn btn-success",
+					"content" : "Predict Model"
+				},
+				"i_class" : "fa fa-check-circle"
+			}
+		},
+		"card_6" : {
+			"content" : {
+				"h1" : "Step 6 :",
+				"a" : {
+					"data-toggle" : "",
+					"data-target" : "",
+					"href" : "/download-model",
+					"class" : "btn btn-outline-info",
+					"content" : "Download Model"
+				},
+				"i_class" : ""
+			}
+		}
+	},
+	"step1 desc" : "Explore, Visualize and Encode Data. View Graphs, Heatmap and Correlation Matrix.",
+	"step2 desc" : "Split Encoded Data into Train and Test Set according to best train_test ratio.",
+	"step3 desc" : "Choose Algorithm for training your Model. Your can choose one of 7 Machine Learning Algorithms.",
+	"step4 desc" : "Evaluate Your Model on Training and Testing Data. View Train Score and Test Score. View Confusion Matrix for the resulting model.",
+	"step5 desc" : "Make Predictions on Your Own Custom Input and check whether you'll have Diabetes in future, and Confidence Score",
+	"step6 desc" : "Download Your Trained Model in the form of .pkl File. Your can use this model to make predictions on custom data anywhere outside the project."
+}
