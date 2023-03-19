@@ -4,3 +4,8 @@ pandas==1.0.1
 matplotlib==3.2.0
 scikit_learn==0.24.0
 gunicorn==19.4.5
+flask-login==0.6.2
+flask-migrate
+flask-bcrypt
+flask-wtf
+email-validator

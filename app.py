@@ -7,10 +7,55 @@ from os import urandom
 import json
 from joblib import load, dump
 import random
+from flask_bcrypt import check_password_hash
+from flask_login import current_user
+
+## For user authentication
+
+from flask_login import (
+    UserMixin,
+    login_user,
+    LoginManager,
+    current_user,
+    logout_user,
+    login_required,
+)
+from extensions import db, migrate, bcrypt, login_manager
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = urandom(24)
 
+app.secret_key = urandom(24)
+
+
+app = Flask(__name__)
+app.secret_key = urandom(24)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
+db.init_app(app)
+migrate.init_app(app, db)
+bcrypt.init_app(app)
+login_manager.init_app(app)
+login_manager.session_protection = "strong"
+login_manager.login_view = "login"
+login_manager.login_message_category = "info"
+
+
+# migrate.init_app(app, db)
+# bcrypt.init_app(app)
+
+
+# @login_manager.user_loader
+# def load_user(user_id):
+# 	new_user = User(username='jdoe', email='jdoe@example.com', pwd='password123')
+# 	db.db.session.add(new_user)
+# 	return User.query.get(int(user_id))
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+# app.config['SECRET_KEY'] = urandom(24)
+from forms import *
 df = pd.read_csv('Dataset\\diabetes_data_upload.csv')
 content_api = 'api\\indexcontent.json'
 feature_api = 'api\\features.json'
@@ -27,11 +72,14 @@ ALGORITHMS = algorithms.ALGORITHMS
 features_train,features_test,labels_train,labels_test = None,None,None,None
 train_score, test_score, test_pred = None, None, None
 
+
 @app.route('/')
+@login_required
 def index():
 	return render_template('index.html', algorithms=ALGORITHMS, content=CONTENT, step=STEP) 
 
 @app.route('/visualize')
+@login_required
 def visualize():
 	global ENCODED
 	global FEATURES
@@ -39,6 +87,7 @@ def visualize():
 	return render_template('visualize.html', Dataset=data, encoded=ENCODED, features=FEATURES)
 
 @app.route('/visualize/encode')
+@login_required
 def encode():
 	global ENCODED
 	global STEP
@@ -52,6 +101,7 @@ def encode():
 	return redirect('/visualize')
 
 @app.route('/split-data', methods=['POST', 'GET'])
+@login_required
 def split():
 	global SPLIT_DATA
 	global STEP
@@ -73,7 +123,7 @@ def split():
 		flash('Data Splitted Successfully')
 
 	return render_template('split.html', split=SPLIT_DATA, features_train=features_train, features_test=features_test, labels_train=labels_train, labels_test=labels_test)
-	
+@login_required	
 @app.route('/reset-split')
 def reset():
 	global ALGORITHMS
@@ -90,12 +140,14 @@ def reset():
 	return redirect('/split-data')
 
 @app.route('/<algorithm>/parameters')
+@login_required
 def parameters(algorithm):
 	if STEP < 3:
 		return render_template('404.html', code=500, e=f"404 Not Found : You Cannot Decide Algorithm Right Now!! Complete earlier steps!\nYou are On step {STEP} / 6")
 	return render_template('parameters.html', name=algorithm, algorithms=ALGORITHMS)
 
 @app.route('/<model>/build-model', methods = ['GET', 'POST'])
+@login_required
 def build_model(model):
 	global MODEL
 	global STEP
@@ -158,6 +210,7 @@ def build_model(model):
 	return render_template('build_model.html', algo=ALGORITHMS[model], model=model, createdModel=MODEL)
 
 @app.route('/reset-parameters')
+@login_required
 def reset_params():
 	global ALGORITHMS
 	if STEP < 4:
@@ -273,6 +326,7 @@ def reset_params():
 	return redirect('/'+session['model']+'/parameters')
 
 @app.route('/evaluate-model')
+@login_required
 def eval():
 	global ALGORITHMS
 	global MODEL
@@ -291,12 +345,14 @@ def eval():
 	return redirect('/evaluate')
 
 @app.route('/evaluate')
+@login_required
 def evaluate():
 	if STEP < 4:
 		return render_template('404.html', code=500, e=f"404 Not Found : You cannot Evaluate Model Right Now!! Complete earlier steps!\nYou are On step {STEP} / 6")
 	return render_template('evaluate.html', train=train_score*100, test=test_score*100, algorithm=ALGORITHMS)
 
 @app.route('/predict', methods=['GET', 'POST'])
+@login_required
 def prediction():
 	global MODEL
 	global STEP
@@ -317,6 +373,7 @@ def prediction():
 	return render_template("predict.html", columns=columns, prediction=None, api=FEATURE_API)
 
 @app.route('/download-model')
+@login_required
 def download_model():
 	if STEP < 6:
 		return render_template('404.html', code=500, e=f"404 Not Found : You cannot Download Model Right Now!! Complete earlier steps!\nYou are On step {STEP} / 6")
@@ -328,5 +385,53 @@ def pagenotfound(e):
 	return render_template('404.html', code=404, e=e)
 
 
+
+# Login route
+@app.route("/login/", methods=("GET", "POST"), strict_slashes=True)
+def login():
+    form = login_form()
+    if form.validate_on_submit():
+        try:
+            user = User.query.filter_by(email=form.email.data).first()
+            if check_password_hash(user.pwd, form.pwd.data):
+                login_user(user)
+                return redirect(url_for('index'))
+            else:
+                flash("Invalid Username or password!", "danger")
+        except Exception as e:
+            flash(e, "danger")
+    return render_template("auth.html",form=form,page_type="Login")
+
+# Register route
+@app.route("/register/", methods=("GET", "POST"), strict_slashes=True)
+def register():
+    form = register_form()
+    
+    if form.validate_on_submit():
+        try:
+            email = form.email.data
+            pwd = form.pwd.data
+            username = form.username.data
+            
+            newuser = User(
+                username=username,
+                email=email,
+                pwd=bcrypt.generate_password_hash(pwd),
+            )
+    
+            db.session.add(newuser)
+            db.session.commit()
+            flash(f"Account Succesfully created", "success")
+            return redirect(url_for("login"))
+
+        except Exception as e:
+            flash(e, "danger")
+
+    return render_template("auth.html",form=form,page_type="Register")
+@app.route("/logout/", methods=("GET", "POST"), strict_slashes=True)
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
 if __name__ == '__main__':
 	app.run(debug=False, port=4000)
